@@ -2,6 +2,33 @@ html,
 body {
   margin: 0;
   padding: 0;
+
+  font-family: "Roboto",sans-serif;
+  font-size: 16px;
+  line-height: 120%;
+  color: #2e2e2e;
+}
+
+h1 {
+  font-family: 'Roboto Condensed';
+  font-size: 28px;
+  line-height: 120%;
+  color: #2e2e2e;
+}
+
+h2 {
+  font-family: 'Roboto Condensed';
+  font-size: 24px;
+  line-height: 120%;
+  color: #2e2e2e;
+}
+
+.hidden {
+  display: none;
+}
+
+.m50 {
+  margin-bottom: 50px;
 }
 
 header {
@@ -22,24 +49,53 @@ header .wrapper {
 .nofloat:after {
   clear: both;
   content: " ";
-  dispaly: table;
+  display: table;
 }
 
+/*.nofloat:before {
+  clear: both;
+  content: " ";
+  display: table;
+}*/
+
 .hd-logo {
+    float: left;
     width: 139px;
     height: 56px;
     background: url("../img/hd-logo.png") no-repeat 50% 50%;
-    float: left;
     margin-top: 19px;
 }
 
-.hd-menu ul {}
-.hd-menu ul il {}
+.hd-menu {
+  line-height: 56px;
+  height: 56px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.hd-menu > ul {
+  display: table;
+  float: right;
+  font-size: 0;
+}
+.hd-menu > ul li {
+  position: relative;
+  display: table-cell;
+  font-size: 15px;
+}
+
+.hd-menu > a.cart{
+  display: block;
+  float: right;
+  margin-left: 100px;
+}
+
 .hd-menu ul il a{}
 
 .slider {
   position: relative;
   background: #eeeeee;
+  /*margin-bottom: 100px;*/
 }
 
 .slider .wrapper {
@@ -87,12 +143,12 @@ header .wrapper {
   height: 10px;
   margin: 1px;
   text-indent: -999px;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   cursor: pointer;
   font-size: 7px;
   border-width: 0;
-  background: #eaeaea;
+  background: #ffffff;
 }
 
 .slider-indicators > li.active {
@@ -101,3 +157,145 @@ header .wrapper {
   width: 12px;
   height: 12px;
 }
+
+main {
+  /*padding-bottom: 632px;*/
+}
+
+.features {
+  padding-bottom: 50px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.feature {
+  float:left;
+  width: 240px;
+  /*height: 460px;*/
+  margin-right: 80px;
+}
+
+.feature:last-child {
+  margin-right:0;
+}
+
+
+.about-us{
+  /*height: 470px;*/
+  padding-bottom: 50px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.what-we-do {
+  float:left;
+  width: 620px;
+}
+
+.how-we-work {
+  float: right;
+  width: 230px;
+}
+
+.partners {
+  padding-bottom: 50px;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.partner {
+  float:left;
+  margin-right: 100px;
+  display: block;
+  height: 90px;
+  vertical-align: middle;
+}
+
+.partner:last-child {
+  margin-right: 0;
+}
+
+.map-canvas {
+  position:relative;
+  height:416px;
+  background: #e9e5dc;
+}
+
+.map-canvas .contacts{
+  position: relative;
+  top: 100px;
+  width: 250px;
+  height: 240px;
+  background: #fff;
+  text-align: center;
+}
+
+footer {
+
+}
+
+.socials {
+  float: left;
+  margin-right: 60px;
+}
+
+.socials > a {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  float: left;
+  background: #e1e1e1;
+}
+
+.lets-be-friends {
+
+}
+
+.write-us {
+  position: relative;
+  bottom: 400px;
+  left: 100px;
+  width: 635px;
+  height: 420px;
+  background: #fff;
+}
+
+.form-wrapper {
+  width: 460px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+}
+
+.form-field-name {
+  float: left;
+  width: 220px;
+}
+
+.form-field-email {
+  float: right;
+  width: 220px;
+}
+
+.write-us .form-textarea {
+  float: left;
+  width: 100%;
+}
+
+.write-us .form-textarea > input {
+  height: 115px;
+  width: 100%;
+}
+
+.write-us button[type="submit"] {
+  float: left;
+  width: 100%;
+}
+
+.btn-close{
+  position: relative;
+  float: right;
+  /*top: 30px;
+  right: 30px;*/
+  width: 60px;
+  height: 60px;
+  background: red
+}
+
