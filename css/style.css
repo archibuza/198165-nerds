@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #eeeeee;
+}
+
+.wrapper {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+header .wrapper {
+  height: 100px;
+}
+
+.nofloat:after {
+  clear: both;
+  content: " ";
+  dispaly: table;
+}
+
+.hd-logo {
+    width: 139px;
+    height: 56px;
+    background: url("../img/hd-logo.png") no-repeat 50% 50%;
+    float: left;
+    margin-top: 19px;
+}
+
+.hd-menu ul {}
+.hd-menu ul il {}
+.hd-menu ul il a{}
+
+.slider {
+  position: relative;
+  background: #eeeeee;
+}
+
+.slider .wrapper {
+  height: 340px;
+}
+
+.slider-page {
+  display: none;
+}
+
+.slider-page.active {
+  display: block;
+}
+
+.learn-more {
+  float:left;
+  width: 300px;
+}
+.learn-more .header{}
+.learn-more p {}
+.learn-more .btn {}
+
+.slider-page img {
+  float: right;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+.slider-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  z-index: 15;
+  width: 60%;
+  margin-left: -30%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slider-indicators > li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 7px;
+  border-width: 0;
+  background: #eaeaea;
+}
+
+.slider-indicators > li.active {
+  background-color: #374249;
+  margin: 0;
+  width: 12px;
+  height: 12px;
+}
