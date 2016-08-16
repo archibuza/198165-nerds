@@ -7,6 +7,13 @@ body {
   font-size: 16px;
   line-height: 120%;
   color: #2e2e2e;
+  height: 100%;
+}
+
+#structure {
+  min-height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 40px;
 }
 
 h1 {
@@ -158,9 +165,7 @@ header .wrapper {
   height: 12px;
 }
 
-main {
-  /*padding-bottom: 632px;*/
-}
+main {}
 
 .features {
   padding-bottom: 50px;
@@ -228,7 +233,8 @@ main {
 }
 
 footer {
-
+  height: 70px;
+  margin-top: -70px;
 }
 
 .socials {
@@ -250,8 +256,9 @@ footer {
 
 .write-us {
   position: relative;
-  bottom: 400px;
-  left: 100px;
+  bottom: 600px;
+  margin-left:auto;
+  margin-right:auto;
   width: 635px;
   height: 420px;
   background: #fff;
@@ -289,7 +296,7 @@ footer {
   width: 100%;
 }
 
-.btn-close{
+.btn-close {
   position: relative;
   float: right;
   /*top: 30px;
@@ -299,3 +306,89 @@ footer {
   background: red
 }
 
+/* * * * * * catalog.html * * * * */
+.greeting {
+  background: #eeeeee;
+}
+
+.greeting .wrapper {
+  height: 240px;
+}
+
+.greeting .title {
+  padding: 35px 110px 80px;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.filter {
+  width: 240px;
+  max-height: 100%;
+  float: left;
+  margin-right: 80px;
+}
+
+.catalog {
+  width: 560px;
+  float: left;
+  /*padding-left: 25px;*/
+}
+
+.sorting ul {
+  display: inline-block;
+}
+
+.sorting ul li {
+  display: inline-block;
+}
+
+.sort-arrows {
+  float: right;
+}
+
+.catalog .items {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+}
+
+.catalog .item {
+  width: 240px;
+  position: relative;
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 80px;
+}
+
+.catalog .item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+.item .item-controls {
+  margin:0;
+  height: 28px;
+  background-color: #f1f1f1;
+}
+
+.item > img {
+  height: 240px;
+}
+
+.item .item-content {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 48px;
+  left: 20px;
+  background-color: #fff;
+  display: none;
+}
+
+/*.item > img:hover .item-content{
+  display: block;
+}*/
+
+.paginator > li {
+  display: inline-block;
+}
