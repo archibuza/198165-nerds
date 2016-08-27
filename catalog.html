@@ -12,7 +12,7 @@
       <div class="wrapper clearfix">
         <a href="/" class="header-logo"></a>
         <nav class="menu header-menu">
-          <a href="#" class="cart">Корзина</a>
+          <a href="#"><div class="cart">Корзина</div></a>
           <ul>
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
@@ -32,13 +32,19 @@
     <div class="wrapper clearfix">
       <aside class="filter">
         <form action="#" method="GET">
-          <fieldset class="price">
+          <fieldset>
             <legend>Стоимость:</legend>
             <div class="price-slider"></div>
-            <label for="startPrice">от</label>
-            <input type="text" name="startPrice" id="startPrice">
-            <label for="endPrice">до</label>
-            <input type="text" name="endPrice" id="endPrice">
+            <div class="price-range clearfix">
+              <div class="price-field">
+                <label for="startPrice">от</label>
+                <input type="text" name="startPrice" id="startPrice">
+              </div>
+              <div class="price-field">
+                <label for="endPrice">до</label>
+                <input type="text" name="endPrice" id="endPrice">
+              </div>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
@@ -47,20 +53,20 @@
             <input type="radio" name="grid" id="grid2" value="2">
             <label for="grid2">Фиксированная</label>
             <input type="radio" name="grid" id="grid3" value="3">
-            <label for="grid2">Резиновая</label>
+            <label for="grid3">Резиновая</label>
           </fieldset>
           <fieldset>
             <legend>Особенности:</legend>
+            <input type="checkbox" name="feature" id="cb1" value="1" checked>
             <label for="cb1">Слайдер</label>
-            <input type="checkbox" name="feature" id="cb1" value="1">
-            <label for="cb2">Блок преимуществ</label>
             <input type="checkbox" name="feature" id="cb2" value="2">
+            <label for="cb2">Блок преимуществ</label>
+            <input type="checkbox" name="feature" id="cb3" value="3" checked>
             <label for="cb3">Новости</label>
-            <input type="checkbox" name="feature" id="cb3" value="3">
-            <label for="cb4">Галерея</label>
             <input type="checkbox" name="feature" id="cb4" value="4">
-            <label for="cb5">Корзина</label>
+            <label for="cb4">Галерея</label>
             <input type="checkbox" name="feature" id="cb5" value="5">
+            <label for="cb5">Корзина</label>
           </fieldset>
           <button type="submit" name="show">Показать</button>
         </form>
@@ -73,8 +79,8 @@
             <li><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По функционалу</a></li>
-            <li class="sort-desc">desc</li>
-            <li class="sort-asc">asc</li>
+            <li class="sort-direction sort-desc"><a href="#">desc</a></li>
+            <li class="sort-direction sort-asc"><a href="#">asc</a></li>
           </ul>
         </div>
 
@@ -166,9 +172,9 @@
   <footer>
     <div class="wrapper clearfix">
       <div class="socials">
-        <a href="#" class="social social-vk">vk</a>
-        <a href="#" class="social social-fb">fb</a>
-        <a href="#" class="social social-inst">inst</a>
+        <a href="#" class="social-btn social-btn-vk">vk</a>
+        <a href="#" class="social-btn social-btn-fb">fb</a>
+        <a href="#" class="social-btn social-btn-inst">inst</a>
       </div>
       <div class="lets-be-friends">
         <h2>Давайте дружить, это выгодно!</h2>

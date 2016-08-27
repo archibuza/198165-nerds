@@ -1,3 +1,4 @@
+/* * * * * * Common * * * * */
 html,
 body {
 
@@ -6,6 +7,15 @@ body {
   line-height: 120%;
   color: #2e2e2e;
   height: 100%;
+}
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-nerds";
+  src: url("../fonts/symbols-nerds.woff") format("woff"),
+       url("../fonts/symbols-nerds.woff2") format("woff2");
 }
 
 .wrapper-main {
@@ -57,13 +67,6 @@ header .wrapper {
   clear: both;
 }
 
-
-/*.nofloat:before {
-  clear: both;
-  content: " ";
-  display: table;
-}*/
-
 .header-logo {
     float: left;
     width: 139px;
@@ -79,26 +82,169 @@ header .wrapper {
   vertical-align: middle;
 }
 
-/*.header-menu > ul {
-  display: table;
-  float: right;
-  font-size: 0;
-}*/
-
 .header-menu > ul li {
   position: relative;
   display: inline-block;
   font-size: 15px;
 }
 
-.header-menu > a.cart{
+.cart{
+  position: relative;
   display: block;
   float: right;
-  margin-left: 100px;
 }
 
-.header-menu ul il a{}
+.cart::before {
+  font-family: "symbols-nerds";
+  content: "\62";
+  width: 15px;
+  height: 15px;
+  margin-right: 13px;
+  opacity: 0.3;
+  color: #000000;
+  font-size: 16px;
+  line-height: 9px;
+}
 
+.cart:hover::before {
+  color: #fb565a;
+  opacity: 1;
+}
+
+.cart:active::before {
+  opacity: 0.15;
+  color: #000000;
+}
+
+.map-canvas {
+  position:relative;
+  min-height:416px;
+  background: #e9e5dc;
+  margin-bottom: 50px;
+}
+
+.map-canvas .contacts{
+  position: relative;
+  top: 100px;
+  width: 250px;
+  min-height: 240px;
+  background: #fff;
+  text-align: center;
+}
+
+footer {
+  min-height: 70px;
+  margin-top: -70px;
+}
+
+.socials {
+  float: left;
+  margin-right: 60px;
+}
+
+.social-btn {
+  display: inline-block;
+  margin-right: 28px;
+  vertical-align: top;
+  width: 61px;
+  height: 62px;
+  font-size: 0;
+  border-color: #000000;
+  position:relative;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+}
+.social-btn:hover {
+  background-color: #fb565a;
+}
+.social-btn:active {
+  background-color: #d6494d;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
+}
+.social-btn::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-family: symbols;
+  font-size: 23px;
+  line-height: 16px;
+  }
+
+.social-btn-vk::before {
+  content: "\76";
+  font-family: "symbols-nerds";
+}
+
+.social-btn-fb::before {
+ content: "\66";
+  font-family: "symbols-nerds";
+}
+
+.social-btn-inst::before {
+  content: "\74";
+  font-family: "symbols-nerds";
+}
+
+.lets-be-friends {
+
+}
+
+.write-us {
+  position: relative;
+  bottom: 600px;
+  margin-left:auto;
+  margin-right:auto;
+  width: 635px;
+  min-height: 420px;
+  background: #fff;
+}
+
+.form-wrapper {
+  width: 460px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 40px;
+}
+
+.form-field-name {
+  float: left;
+  width: 220px;
+}
+
+.form-field-email {
+  float: right;
+  width: 220px;
+}
+
+.write-us .form-textarea {
+  float: left;
+  width: 100%;
+}
+
+.write-us .form-textarea > input {
+  min-height: 115px;
+  width: 100%;
+}
+
+.write-us button[type="submit"] {
+  float: left;
+  width: 100%;
+}
+
+.btn-close {
+  position: relative;
+  float: right;
+  /*top: 30px;
+  right: 30px;*/
+  width: 60px;
+  height: 60px;
+  background: red
+}
+
+
+/* * * * * * index.html * * * * */
 .slider {
   position: relative;
   background: #eeeeee;
@@ -166,7 +312,6 @@ header .wrapper {
   height: 12px;
 }
 
-main {}
 
 .features {
   padding-bottom: 50px;
@@ -221,103 +366,12 @@ main {}
   margin-right: 0;
 }
 
-.map-canvas {
-  position:relative;
-  min-height:416px;
-  background: #e9e5dc;
-  margin-bottom: 50px;
-}
 
-.map-canvas .contacts{
-  position: relative;
-  top: 100px;
-  width: 250px;
-  min-height: 240px;
-  background: #fff;
-  text-align: center;
-}
-
-footer {
-  min-height: 70px;
-  margin-top: -70px;
-}
-
-.socials {
-  float: left;
-  margin-right: 60px;
-}
-
-.socials > a {
-  width: 60px;
-  height: 60px;
-  margin-right: 10px;
-  float: left;
-  background: #e1e1e1;
-}
-
-.lets-be-friends {
-
-}
-
-.write-us {
-  position: relative;
-  bottom: 600px;
-  margin-left:auto;
-  margin-right:auto;
-  width: 635px;
-  min-height: 420px;
-  background: #fff;
-}
-
-.form-wrapper {
-  width: 460px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 40px;
-}
-
-.form-field-name {
-  float: left;
-  width: 220px;
-}
-
-.form-field-email {
-  float: right;
-  width: 220px;
-}
-
-.write-us .form-textarea {
-  float: left;
-  width: 100%;
-}
-
-.write-us .form-textarea > input {
-  min-height: 115px;
-  width: 100%;
-}
-
-.write-us button[type="submit"] {
-  float: left;
-  width: 100%;
-}
-
-.btn-close {
-  position: relative;
-  float: right;
-  /*top: 30px;
-  right: 30px;*/
-  width: 60px;
-  height: 60px;
-  background: red
-}
 
 /* * * * * * catalog.html * * * * */
 .greeting {
   background: #eeeeee;
   margin-bottom: 50px;
-}
-
-.greeting .wrapper {
   min-height: 240px;
 }
 
@@ -330,14 +384,138 @@ footer {
 
 .filter {
   width: 240px;
+  padding: 0 10px;
   max-height: 100%;
   float: left;
-  margin-right: 80px;
+  margin-right: 20px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+fieldset label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price-range input {
+  width: 80px;
+  height: 38px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  color: #283136;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-align: center;
+  border: none;
+}
+
+.price-range label {
+  color: #283136;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.price-field:first-child {
+  float:left;
+}
+.price-field:last-child {
+  float:right;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display:none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: block;
+  margin: 10px 0;
+  line-height: 20px;
+  padding-left: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  font-family: "symbols-nerds";
+  content: "\2610";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  color: #c1c1c1;
+  font-size: 28px;
+  line-height: 20px;
+}
+
+input[type="checkbox"] + label:hover::before,
+input[type="radio"] + label:hover::before {
+  color: #b5b5b5;
+}
+
+input[type="checkbox"]:checked + label::before {
+  font-family: "symbols-nerds";
+  content: "\2611";
+}
+
+input[type="checkbox"]:disabled + label::before,
+input[type="radio"]:disabled + label::before {
+  opacity: 0.3;
+  color: #b5b5b5;
+}
+
+input[type="radio"] + label::before {
+  font-family: "symbols-nerds";
+  content: "\25cb";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  color: #c1c1c1;
+  font-size: 28px;
+  line-height: 20px;
+}
+
+input[type="radio"]:checked + label::before {
+  font-family: "symbols-nerds";
+  content: "\25cf";
+}
+
+.filter button {
+  width: 155px;
+  height: 38px;
+  background-color: #f1f1f1;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
 
 .catalog {
-  width: 560px;
-  float: left;
+  width: 580px;
+  padding: 0 10px;
+  float: right;
   margin-bottom: 50px;
   /*padding-left: 25px;*/
 }
@@ -346,8 +524,23 @@ footer {
   display: inline-block;
 }
 
-.sorting ul li {
+.sorting-title {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.sorting li {
   display: inline-block;
+  opacity: 0.3;
+  color: #000000;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.sort-direction {
+  float: right;
 }
 
 .catalog .items {
