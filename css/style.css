@@ -1,7 +1,5 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
 
   font-family: "Roboto",sans-serif;
   font-size: 16px;
@@ -10,7 +8,7 @@ body {
   height: 100%;
 }
 
-#structure {
+.wrapper-main {
   min-height: 100%;
   box-sizing: border-box;
   padding-bottom: 40px;
@@ -34,10 +32,6 @@ h2 {
   display: none;
 }
 
-.m50 {
-  margin-bottom: 50px;
-}
-
 header {
   background: #eeeeee;
 }
@@ -50,14 +44,19 @@ header {
 }
 
 header .wrapper {
-  height: 100px;
+  min-height: 100px;
 }
 
-.nofloat:after {
-  clear: both;
+.clearfix::before,
+.clearfix::after {
   content: " ";
   display: table;
 }
+
+.clearfix::after {
+  clear: both;
+}
+
 
 /*.nofloat:before {
   clear: both;
@@ -65,7 +64,7 @@ header .wrapper {
   display: table;
 }*/
 
-.hd-logo {
+.header-logo {
     float: left;
     width: 139px;
     height: 56px;
@@ -73,35 +72,37 @@ header .wrapper {
     margin-top: 19px;
 }
 
-.hd-menu {
+.header-menu {
   line-height: 56px;
-  height: 56px;
+  min-height: 56px;
   font-size: 15px;
   vertical-align: middle;
 }
 
-.hd-menu > ul {
+/*.header-menu > ul {
   display: table;
   float: right;
   font-size: 0;
-}
-.hd-menu > ul li {
+}*/
+
+.header-menu > ul li {
   position: relative;
-  display: table-cell;
+  display: inline-block;
   font-size: 15px;
 }
 
-.hd-menu > a.cart{
+.header-menu > a.cart{
   display: block;
   float: right;
   margin-left: 100px;
 }
 
-.hd-menu ul il a{}
+.header-menu ul il a{}
 
 .slider {
   position: relative;
   background: #eeeeee;
+  margin-bottom: 50px;
   /*margin-bottom: 100px;*/
 }
 
@@ -170,6 +171,7 @@ main {}
 .features {
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
+  margin-bottom: 50px;
 }
 
 .feature {
@@ -188,6 +190,7 @@ main {}
   /*height: 470px;*/
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
+  margin-bottom: 50px;
 }
 
 .what-we-do {
@@ -203,13 +206,14 @@ main {}
 .partners {
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
+  margin-bottom: 50px;
 }
 
 .partner {
   float:left;
   margin-right: 100px;
   display: block;
-  height: 90px;
+  min-height: 90px;
   vertical-align: middle;
 }
 
@@ -219,21 +223,22 @@ main {}
 
 .map-canvas {
   position:relative;
-  height:416px;
+  min-height:416px;
   background: #e9e5dc;
+  margin-bottom: 50px;
 }
 
 .map-canvas .contacts{
   position: relative;
   top: 100px;
   width: 250px;
-  height: 240px;
+  min-height: 240px;
   background: #fff;
   text-align: center;
 }
 
 footer {
-  height: 70px;
+  min-height: 70px;
   margin-top: -70px;
 }
 
@@ -260,7 +265,7 @@ footer {
   margin-left:auto;
   margin-right:auto;
   width: 635px;
-  height: 420px;
+  min-height: 420px;
   background: #fff;
 }
 
@@ -287,7 +292,7 @@ footer {
 }
 
 .write-us .form-textarea > input {
-  height: 115px;
+  min-height: 115px;
   width: 100%;
 }
 
@@ -309,10 +314,11 @@ footer {
 /* * * * * * catalog.html * * * * */
 .greeting {
   background: #eeeeee;
+  margin-bottom: 50px;
 }
 
 .greeting .wrapper {
-  height: 240px;
+  min-height: 240px;
 }
 
 .greeting .title {
@@ -332,6 +338,7 @@ footer {
 .catalog {
   width: 560px;
   float: left;
+  margin-bottom: 50px;
   /*padding-left: 25px;*/
 }
 
@@ -341,10 +348,6 @@ footer {
 
 .sorting ul li {
   display: inline-block;
-}
-
-.sort-arrows {
-  float: right;
 }
 
 .catalog .items {

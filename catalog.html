@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="structure">
+  <div class="wrapper-main">
     <header>
-      <div class="wrapper nofloat">
-        <a href="/" class="hd-logo"></a>
-        <nav class="menu hd-menu">
+      <div class="wrapper clearfix">
+        <a href="/" class="header-logo"></a>
+        <nav class="menu header-menu">
           <a href="#" class="cart">Корзина</a>
           <ul>
             <li><a href="#">Студия</a></li>
@@ -23,13 +23,13 @@
       </div>
     </header>
 
-    <div class="greeting m50">
-      <div class="wrapper nofloat">
+    <div class="greeting">
+      <div class="wrapper clearfix">
         <div class="title">Добро пожаловать в магазин готовых макетов</div>
       </div>
     </div>
 
-    <div class="wrapper nofloat">
+    <div class="wrapper clearfix">
       <aside class="filter">
         <form action="#" method="GET">
           <fieldset class="price">
@@ -66,17 +66,15 @@
         </form>
       </aside>
 
-      <section class="catalog m50">
-        <div class="sorting nofloat">
+      <section class="catalog">
+        <div class="sorting clearfix">
           <span class="sorting-title">Сортировать:</span>
           <ul>
             <li><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По функционалу</a></li>
-          </ul>
-          <ul class="sort-arrows">
-            <li><span class="sort-desc sort-selected">desc</span></li>
-            <li><span class="sort-asc">asc</span></li>
+            <li class="sort-desc">desc</li>
+            <li class="sort-asc">asc</li>
           </ul>
         </div>
 
@@ -84,7 +82,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-aviator.png" alt="AVIATOR" width="240" height="240">
+            <img src="img/item-aviator.jpg" alt="AVIATOR" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Aviator</b></a>
               <p>Одностраничный макет с авторским дизайном</p>
@@ -94,7 +92,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-sunset.png" alt="Sunset" width="240" height="240">
+            <img src="img/item-sunset.jpg" alt="Sunset" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Sunset</b></a>
               <p>Интернет-магазин с личным кабинетом</p>
@@ -104,7 +102,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-forte.png" alt="Forte" width="240" height="240">
+            <img src="img/item-forte.jpg" alt="Forte" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Forte</b></a>
               <p>Отличный макет для личного блога</p>
@@ -114,7 +112,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-thai.png" alt="Modern Organic Thai" width="240" height="240">
+            <img src="img/item-thai.jpg" alt="Modern Organic Thai" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Modern Organic Thai</b></a>
               <p>Сайт для ресторана быстрого питания</p>
@@ -124,7 +122,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-avenue.png" alt="Avenue" width="240" height="240">
+            <img src="img/item-avenue.jpg" alt="Avenue" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Avenue</b></a>
               <p>Макет для блога о путешествиях</p>
@@ -134,7 +132,7 @@
 
           <div class="item">
             <ul class="item-controls"></ul>
-            <img src="img/item-dovetail.png" alt="Dovetail" width="240" height="240">
+            <img src="img/item-dovetail.jpg" alt="Dovetail" width="240" height="240">
             <div class="item-content">
               <a href="#"><b>Dovetail</b></a>
               <p>Интернет-магазин с галереей товаров</p>
@@ -152,7 +150,7 @@
       </section>
     </div>
 
-    <div class="map-canvas m50">
+    <div class="map-canvas">
       <div class="wrapper">
         <div class="contacts">
           <h2>NЁRDS DESIGN STUDIO</h2>
@@ -166,7 +164,7 @@
   </div>
 
   <footer>
-    <div class="wrapper nofloat">
+    <div class="wrapper clearfix">
       <div class="socials">
         <a href="#" class="social social-vk">vk</a>
         <a href="#" class="social social-fb">fb</a>
