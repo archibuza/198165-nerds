@@ -5,19 +5,20 @@
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper-main">
     <header>
       <div class="wrapper clearfix">
         <a href="/" class="header-logo"></a>
-        <nav class="menu header-menu">
-          <a href="#"><div class="cart">Корзина</div></a>
+        <nav class="header-menu">
           <ul>
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html">Магазин</a></li>
+            <li><a href="catalog.html" class="current">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
+            <li><a href="#" class="cart">Корзина</a></li>
           </ul>
         </nav>
       </div>
@@ -68,7 +69,7 @@
             <input type="checkbox" name="feature" id="cb5" value="5">
             <label for="cb5">Корзина</label>
           </fieldset>
-          <button type="submit" name="show">Показать</button>
+          <button type="submit" name="show" class="btn btn-filter">Показать</button>
         </form>
       </aside>
 
@@ -76,133 +77,153 @@
         <div class="sorting clearfix">
           <span class="sorting-title">Сортировать:</span>
           <ul>
-            <li><a href="#">По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a href="#">По функционалу</a></li>
-            <li class="sort-direction sort-desc"><a href="#">desc</a></li>
-            <li class="sort-direction sort-asc"><a href="#">asc</a></li>
+            <li><span class="sort-field"><a href="#">По цене</a></span></li>
+            <li><span class="sort-field"><a href="#">По типу</a></span></li>
+            <li><span class="sort-field"><a href="#">По функционалу</a></span></li>
+            <li><a href="#"><span class="sort-direction sort-desc" selected>desc</span></a></li>
+            <li><a href="#"><span class="sort-direction sort-asc">asc</span></a></li>
           </ul>
         </div>
 
         <div class="items">
-
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-aviator.jpg" alt="AVIATOR" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Aviator</b></a>
-              <p>Одностраничный макет с авторским дизайном</p>
-              <a href="#" class="btn">8000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Aviator</a></div>
+              <div class="item-description">Одностраничный макет с авторским дизайном</div>
+              <a href="#" class="btn btn-buy">8000 p.</a>
             </div>
           </div>
 
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-sunset.jpg" alt="Sunset" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Sunset</b></a>
-              <p>Интернет-магазин с личным кабинетом</p>
-              <a href="#" class="btn">10000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Sunset</a></div>
+              <div class="item-description">Интернет-магазин с личным кабинетом</div>
+              <a href="#" class="btn btn-buy">10000 p.</a>
             </div>
           </div>
 
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-forte.jpg" alt="Forte" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Forte</b></a>
-              <p>Отличный макет для личного блога</p>
-              <a href="#" class="btn">5000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Forte</a></div>
+              <div class="item-description">Отличный макет для личного блога</div>
+              <a href="#" class="btn btn-buy">5000 p.</a>
             </div>
           </div>
 
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-thai.jpg" alt="Modern Organic Thai" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Modern Organic Thai</b></a>
-              <p>Сайт для ресторана быстрого питания</p>
-              <a href="#" class="btn">12000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Modern Organic Thai</a></div>
+              <div class="item-description">Сайт для ресторана быстрого питания</div>
+              <a href="#" class="btn btn-buy">12000 p.</a>
             </div>
           </div>
 
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-avenue.jpg" alt="Avenue" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Avenue</b></a>
-              <p>Макет для блога о путешествиях</p>
-              <a href="#" class="btn">8000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Avenue</a></div>
+              <div class="item-description">Макет для блога о путешествиях</div>
+              <a href="#" class="btn btn-buy">8000 p.</a>
             </div>
           </div>
 
-          <div class="item">
-            <ul class="item-controls"></ul>
+          <div class="catalog-item">
+            <ul class="item-controls">
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+              <li><div class="round"></div></li>
+            </ul>
             <img src="img/item-dovetail.jpg" alt="Dovetail" width="240" height="240">
             <div class="item-content">
-              <a href="#"><b>Dovetail</b></a>
-              <p>Интернет-магазин с галереей товаров</p>
-              <a href="#" class="btn">14000<span class="rur">p.</span></a>
+              <div class="item-name"><a href="#">Dovetail</a></div>
+              <div class="item-description">Интернет-магазин с галереей товаров</div>
+              <a href="#" class="btn btn-buy">14000 p.</a>
             </div>
           </div>
         </div>
 
         <ul class="paginator">
-          <li class="selected"><a href="">1</a></li>
-          <li>2</li>
-          <li><a href="">3</a></li>
-          <li><a href="" class="next-page">Следущая</a></li>
+          <li><a href="" class="btn btn-pager current">1</a></li>
+          <li><a href="" class="btn btn-pager">2</a></li>
+          <li><a href="" class="btn btn-pager">3</a></li>
+          <li><a href="" class="btn btn-pager btn-pager-arrow">Следущая</a></li>
         </ul>
       </section>
     </div>
 
     <div class="map-canvas">
-      <div class="wrapper">
-        <div class="contacts">
-          <h2>NЁRDS DESIGN STUDIO</h2>
-          191186, Санкт-Петербург,<br>
-          ул. Б. Конюшенная, д. 19/8
+      <div class="contacts">
+        <div class="title">Nёrds design studio</div>
+        <p>191186, Санкт-Петербург,
+          ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a href="#" class="btn btn-red">Напишите нам</a>
+          <a href="#" class="btn btn-write-us">Напишите нам</a>
+        </div>
+        <div class="map-pointer"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="wrapper clearfix">
+        <div class="socials">
+          <a href="#" class="social-btn social-btn-vk">vk</a>
+          <a href="#" class="social-btn social-btn-fb">fb</a>
+          <a href="#" class="social-btn social-btn-inst">inst</a>
+        </div>
+        <div class="lets-be-friends">
+          <div class="title">Давайте дружить, это выгодно!</div>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
-    </div>
-  </div>
+    </footer>
 
-  <footer>
-    <div class="wrapper clearfix">
-      <div class="socials">
-        <a href="#" class="social-btn social-btn-vk">vk</a>
-        <a href="#" class="social-btn social-btn-fb">fb</a>
-        <a href="#" class="social-btn social-btn-inst">inst</a>
-      </div>
-      <div class="lets-be-friends">
-        <h2>Давайте дружить, это выгодно!</h2>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
-    </div>
-  </footer>
-
-  <div class="write-us hidden">
-    <button type="button" class="btn-close"></button>
-    <div class="form-wrapper">
-      <form action="#" method="GET">
-        <div class="form-field-name">
+    <div class="write-us ">
+      <button type="button" class="btn-close"></button>
+      <form action="#" method="GET" class="write-us-form">
+        <div class="form-field-text">
           <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" placeholder="Представтесь пожалуйста">
+          <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
         </div>
-        <div class="form-field-email">
+        <div class="form-field-text">
           <label for="email">Ваш e-mail:</label>
           <input type="text" name="email" id="email" placeholder="Для отправки ответа">
         </div>
         <div class="form-textarea">
           <label for="message">Текст письма:</label>
-          <input type="text" name="message" id="message" placeholder="В свободной форме">
+          <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="btn btn-send">Отправить</button>
       </form>
     </div>
-  </div>
 
-</body>
-</html>
+  </body>
+  </html>
