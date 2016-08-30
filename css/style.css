@@ -622,7 +622,7 @@ background-color: #01a25e;
   /*height: 470px;*/
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .what-we-do {
@@ -638,19 +638,23 @@ background-color: #01a25e;
 .partners {
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .partner {
   float:left;
-  margin-right: 100px;
-  display: block;
-  min-height: 90px;
-  vertical-align: middle;
+  min-height: 86px;
+  width: 210px;
+  margin-right: 135px;
 }
 
 .partner:last-child {
   margin-right: 0;
+}
+
+.partner:hover,
+.partner:active {
+  opacity: 0.5;
 }
 
 
