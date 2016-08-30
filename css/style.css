@@ -31,7 +31,9 @@ body {
   font-weight: 500;
   color: #2e2e2e;
   height: 100%;
+  z-index: 1;
 }
+
 
 h2 {
   font-size: 18px;
@@ -63,13 +65,20 @@ h2 {
   outline: 0;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 3px;
+  text-align: center;
 }
-
 .btn:disabled,
 .btn.disabled {
   opacity: 0.5;
   cursor: default;
+}
+.btn:hover {
+  background-color: #d6494d;
+}
+.btn:active {
+  background-color: #b63538;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
 .wrapper-main {
@@ -216,7 +225,7 @@ header {
   color: #666666;
 }
 
-.btn-write-us {
+.contacts .btn {
   position: absolute;
   left: 25px;
   bottom: 30px;
@@ -227,10 +236,10 @@ header {
   font-weight: 700;
   line-height: 18px;
 }
-.btn-write-us:hover {
+.contacts .btn:hover {
   background-color: #d6494d;
 }
-.btn-write-us:active {
+.contacts .btn:active {
   background-color: #b63538;
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
@@ -310,7 +319,7 @@ footer {
   line-height: 22px;
 }
 
-.write-us {
+.modal-feedback {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -321,17 +330,18 @@ footer {
   background: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
   padding: 55px 90px 50px 80px;
+  z-index: 20;
 }
 
-.write-us input,
-.write-us label,
-.write-us textarea {
+.modal-feedback input,
+.modal-feedback label,
+.modal-feedback textarea {
   margin: 0;
   padding: 0;
 }
 
-.write-us input,
-.write-us textarea {
+.modal-feedback input,
+.modal-feedback textarea {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -340,19 +350,25 @@ footer {
   border: 2px solid #d7dcde;
   border-radius: 2px;
   padding: 8px 14px;
-}
-
-.write-us input[type="text"],
-.write-us textarea {
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
-.write-us textarea {
+.modal-feedback input:hover,
+.modal-feedback textarea:hover {
+  border: 2px solid #a2a9ac;
+}
+
+.modal-feedback input:focus,
+.modal-feedback textarea:focus {
+  border: 2px solid #56bffb;
+}
+
+.modal-feedback textarea {
   resize: none;
 }
 
-.write-us label {
+.modal-feedback label {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -360,7 +376,7 @@ footer {
   margin-bottom: 9px;
 }
 
-.write-us .form-field-text {
+.modal-feedback .form-field-text {
   float: left;
   width: 220px;
   margin-bottom: 20px;
@@ -370,12 +386,12 @@ footer {
   margin-right: 20px;
 }
 
-.write-us .form-textarea {
+.modal-feedback .form-textarea {
   float: left;
   width: 460px;
 }
 
-.btn-send {
+.modal-feedback .btn-send {
   position: absolute;
   left: 80px;
   bottom: 50px;
@@ -386,15 +402,15 @@ footer {
   font-weight: 500;
   line-height: 18px;
 }
-.btn-send:hover {
+.modal-feedback .btn-send:hover {
   background-color: #d6494d;
 }
-.btn-send:active {
+.modal-feedback .btn-send:active {
   background-color: #b63538;
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
-.btn-close {
+.modal-feedback .btn-close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -404,95 +420,203 @@ footer {
   border-radius: 50%;
   background: url("../img/cross.png") no-repeat 50% 50%;
   background-color: #fb565a;
+  cursor: pointer;
 }
+
+.btn-close:hover {
+  background-color: #d6494d;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5)
+}
+
 
 
 /* * * * * * index.html * * * * */
 .slider {
-  position: relative;
   background: #eeeeee;
-  margin-bottom: 50px;
-  /*margin-bottom: 100px;*/
+  margin-bottom: 80px;
 }
 
-.slider .wrapper {
-  height: 340px;
+.slides {
+  position: relative;
+  width: 880px;
+  height: 310px;
 }
 
-.slider-page {
-  display: none;
-}
-
-.slider-page.active {
-  display: block;
-}
-
-.learn-more {
-  float:left;
-  width: 300px;
-}
-.learn-more .header{}
-.learn-more p {}
-.learn-more .btn {}
-
-.slider-page img {
-  float: right;
-  height: auto;
-  vertical-align: middle;
-  border: 0;
-}
-
-.slider-indicators {
+.slide {
   position: absolute;
-  bottom: 10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide-text {
+  width: 380px;
+  padding: 30px 0;
+  color: #283136;
+}
+
+.slide-text .title{
+  font-size: 36px;
+  line-height: 1;
+  font-weight: bold;
+  color: #000000;
+}
+
+.slide .btn {
+  display: block;
+  width: 240px;
+  padding: 10px 0;
+  margin-top: 25px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.slide:nth-child(1) {
+  background-image: url("../img/slider-pic-1.png");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+}
+
+.slide:nth-child(2) {
+  background-image: url("../img/slider-pic-2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 10px;
+}
+
+.slide:nth-child(2) .slide-text {
+  width: 467px;
+}
+
+.slide:nth-child(3) {
+  background-image: url("../img/slider-pic-3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slide:nth-child(3) .slide-text {
+  width: 467px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 95px;
   left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
+  width: 200px;
+  height: 10px;
+  margin-left: -100px;
   padding-left: 0;
   list-style: none;
   text-align: center;
+  z-index: 1000;
 }
 
-.slider-indicators > li {
+.slider-controls > li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
+  vertical-align: top;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
   cursor: pointer;
-  font-size: 7px;
-  border-width: 0;
   background: #ffffff;
 }
 
-.slider-indicators > li.active {
-  background-color: #374249;
-  margin: 0;
-  width: 12px;
-  height: 12px;
+.slider-controls > li.active {
+  background: #c1c1c1;
 }
 
+.slide {
+  display: none;
+}
+
+.slide:nth-child(1) {
+  display: block;
+}
 
 .features {
-  padding-bottom: 50px;
+  margin-bottom: 80px;
+  padding-bottom: 80px;
   border-bottom: 2px solid #eeeeee;
-  margin-bottom: 50px;
+
 }
 
 .feature {
   float:left;
   width: 240px;
-  /*height: 460px;*/
   margin-right: 80px;
+}
+
+.feature img {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.feature > p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  color: #283136;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.feature .btn {
+  padding: 10px 40px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.btn-yellow {
+  background-color: #efc84a;
+}
+.btn-yellow:hover {
+  background-color: #d6ae2c;
+}
+.btn-yellow:active {
+  background-color: #c09b24;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn-green {
+  background-color: #00ca74;
+}
+.btn-green:hover {
+background-color: #01a25e;
+}
+.btn-green:active {
+  background-color: #009053;
+  box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
 .feature:last-child {
   margin-right:0;
 }
-
 
 .about-us{
   /*height: 470px;*/
@@ -574,9 +698,52 @@ legend {
   text-transform: uppercase;
 }
 
-.price-range input {
-  width: 80px;
-  height: 38px;
+.range-filter {
+  width: 240px;
+}
+
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 15px;
+  padding: 0 30px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.range-controls .scale {
+  margin-top: 39px;
+  height: 2px;
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  height: 2px;
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #ffffff;
+  background: #ababab;
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+}
+
+.range-controls .max-toggle {
+  left: 145px;
+}
+
+.price-controls input {
+  padding: 8px 10px;
+  width: 60px;
+  margin-left: 7px;
   background-color: #f1f1f1;
   border-radius: 5px;
   color: #283136;
@@ -587,7 +754,7 @@ legend {
   border: none;
 }
 
-.price-range label {
+.price-controls label {
   color: #283136;
   font-size: 16px;
   font-weight: 500;

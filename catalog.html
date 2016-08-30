@@ -11,12 +11,12 @@
   <div class="wrapper-main">
     <header>
       <div class="wrapper clearfix">
-        <a href="/" class="header-logo"></a>
+        <a href="index.html" class="header-logo"></a>
         <nav class="header-menu">
           <ul>
             <li><a href="#">Студия</a></li>
             <li><a href="#">Клиенты</a></li>
-            <li><a href="catalog.html" class="current">Магазин</a></li>
+            <li><a class="current">Магазин</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#" class="cart">Корзина</a></li>
           </ul>
@@ -35,21 +35,30 @@
         <form action="#" method="GET">
           <fieldset>
             <legend>Стоимость:</legend>
-            <div class="price-slider"></div>
-            <div class="price-range clearfix">
-              <div class="price-field">
-                <label for="startPrice">от</label>
-                <input type="text" name="startPrice" id="startPrice">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale"><div class="bar" style="width: 70%;"></div></div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
               </div>
-              <div class="price-field">
-                <label for="endPrice">до</label>
-                <input type="text" name="endPrice" id="endPrice">
+              <div class="price-controls">
+                <div class="price-field">
+                  <label for="startPrice">от</label>
+                  <input type="text" name="startPrice" id="startPrice" value="0">
+                </div>
+                <div class="price-field">
+                  <label for="endPrice">до</label>
+                  <input type="text" name="endPrice" id="endPrice" value="1500">
+                </div>
               </div>
             </div>
+
+
+
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
-            <input type="radio" name="grid" id="grid1" value="1">
+            <input type="radio" name="grid" id="grid1" value="1" checked>
             <label for="grid1">Адаптивная</label>
             <input type="radio" name="grid" id="grid2" value="2">
             <label for="grid2">Фиксированная</label>
@@ -172,7 +181,7 @@
         </div>
 
         <ul class="paginator">
-          <li><a href="" class="btn btn-pager current">1</a></li>
+          <li><a class="btn btn-pager current">1</a></li>
           <li><a href="" class="btn btn-pager">2</a></li>
           <li><a href="" class="btn btn-pager">3</a></li>
           <li><a href="" class="btn btn-pager btn-pager-arrow">Следущая</a></li>
@@ -186,7 +195,7 @@
         <p>191186, Санкт-Петербург,
           ул. Б. Конюшенная, д. 19/8</p>
           <p>тел. +7 (812) 275-75-75</p>
-          <a href="#" class="btn btn-write-us">Напишите нам</a>
+          <a href="#" class="btn">Напишите нам</a>
         </div>
         <div class="map-pointer"></div>
       </div>
@@ -206,9 +215,9 @@
       </div>
     </footer>
 
-    <div class="write-us ">
+    <div class="modal-feedback hidden">
       <button type="button" class="btn-close"></button>
-      <form action="#" method="GET" class="write-us-form">
+      <form action="#" method="POST">
         <div class="form-field-text">
           <label for="name">Ваше имя:</label>
           <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
@@ -224,6 +233,8 @@
         <button type="submit" class="btn btn-send">Отправить</button>
       </form>
     </div>
+
+    <div class="modal-overlay hidden"></div>
 
   </body>
   </html>
