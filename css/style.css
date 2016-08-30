@@ -141,7 +141,7 @@ header {
 }
 
 .header-menu a.cart {
-  margin-right: -5px;
+  margin-right: -15px;
   padding-left: 23px;
 }
 
@@ -928,7 +928,8 @@ input[type="radio"]:checked + label::before {
   color: #c1c1c1;
 }
 
-.sort-direction[selected]::before {
+.sort-direction[selected]::before,
+.sort-direction.selected::before {
   color: #00ca74;
 }
 
