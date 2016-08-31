@@ -646,6 +646,7 @@ background-color: #01a25e;
   min-height: 86px;
   width: 210px;
   margin-right: 135px;
+  opacity: 0.2;
 }
 
 .partner:last-child {
@@ -654,7 +655,7 @@ background-color: #01a25e;
 
 .partner:hover,
 .partner:active {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 
