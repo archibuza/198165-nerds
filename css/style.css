@@ -11,6 +11,9 @@
   border: 1px solid red;
 }*/
 
+/*.wrapper {
+  background-color: #E68787;
+}*/
 
 /* * * * * * Common * * * * */
 @font-face {
@@ -88,10 +91,12 @@ h2 {
 }
 
 .wrapper {
-  width: 900px;
+  width: 880px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 header {
@@ -102,15 +107,14 @@ header {
 
 .header-logo {
   float: left;
-  padding-left: 20px;
   width: 139px;
   height: 56px;
   background: url("../img/hd-logo.png") no-repeat 50% 50%;
 }
 
-.header-menu {
+nav.header-menu {
   float: right;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 .header-menu ul {
@@ -126,14 +130,14 @@ header {
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
-  padding: 15px 23px 0;
 }
 
 .header-menu a {
-  /*display: block;*/
   color: #000000;
   text-decoration: none;
+  margin-left: 45px;
 }
+
 
 .header-menu a.current {
   padding-bottom: 2px;
@@ -141,8 +145,7 @@ header {
 }
 
 .header-menu a.cart {
-  margin-right: -15px;
-  padding-left: 23px;
+  margin-left: 68px;
 }
 
 .header-menu a:hover {
@@ -154,23 +157,23 @@ header {
   color: #000000;
 }
 
-.cart::before {
+.header-menu a.cart::before {
   font-family: "symbols-nerds";
   content: "\62";
-  padding-right: 13px;
   opacity: 0.3;
   color: #000000;
   font-size: 16px;
   line-height: 9px;
   text-transform: none;
+  margin-right: 15px;
 }
 
-.cart:hover::before {
+.header-menu a.cart:hover::before {
   opacity: 1;
   color: #fb565a;
 }
 
-.cart:active::before {
+.header-menu a.cart:active::before {
   opacity: 0.15;
   color: #000000;
 }
@@ -447,7 +450,7 @@ footer {
 
 .slides {
   position: relative;
-  width: 880px;
+  /*width: 900px;*/
   height: 310px;
 }
 
@@ -547,7 +550,7 @@ footer {
 }
 
 .features {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   padding-bottom: 80px;
   border-bottom: 2px solid #eeeeee;
 
@@ -618,53 +621,132 @@ background-color: #01a25e;
   margin-right:0;
 }
 
-.about-us{
-  /*height: 470px;*/
+.about-us {
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
-.what-we-do {
-  float:left;
-  width: 620px;
+.about-us h1,
+.about-us h2,
+.about-us p,
+.about-us ul {
+  margin: 0;
+  padding: 0;
 }
 
-.how-we-work {
+.about-us ul {
+  list-style: none;
+}
+
+.about-us li {
+  position: relative;
+  margin-bottom: 35px;
+  padding-left: 35px;
+}
+
+.about-us li:last-child {
+  margin-bottom: 0;
+}
+
+.about-us li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  top: 50%;
+  left:0;
+  border-bottom: 2px solid #fb565a;
+}
+
+
+.about-us h1 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-top: 13px;
+}
+
+.about-us h2, p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.about-us h2 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+h2.decorated {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  background-color: #ffffff;
+  z-index: 5;
+}
+
+.decor-line {
+  position: relative;
+  top: -43px;
+  border-bottom: 2px solid #eeeeee;
+  z-index: 1;
+}
+
+.about-us .centred {
+  text-align: center;
+}
+
+.about-us-row {
+  /*background-color: #E68787;*/
+  margin-bottom: 22px;
+}
+
+.about-us-column-left {
+  /*background-color: #E6BBBB;*/
+  width: 575px;
+  float: left;
+}
+
+.about-us-column-right {
+  /*background-color: #B8B5DA;*/
+  width: 240px;
   float: right;
-  width: 230px;
 }
 
-.partners {
+ul.partners {
+  margin: 0;
+  padding: 0;
+  list-style:none;
+  font-size: 0;
   padding-bottom: 50px;
   border-bottom: 2px solid #eeeeee;
   margin-bottom: 80px;
 }
 
-.partner {
-  float:left;
-  min-height: 86px;
-  width: 210px;
-  margin-right: 135px;
+ul.partners li {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 110px;
+  vertical-align: middle;
+  text-align: center;
+  width: 220px;
   opacity: 0.2;
 }
 
-.partner:last-child {
+ul.partners li:last-child {
   margin-right: 0;
 }
 
-.partner:hover,
-.partner:active {
+ul.partners li:hover,
+ul.partners li:active {
   opacity: 1;
 }
-
 
 
 /* * * * * * catalog.html * * * * */
 .greeting {
   background: #eeeeee;
   margin-bottom: 50px;
-  /*min-height: 240px;*/
 }
 
 .greeting .title {
@@ -677,7 +759,6 @@ background-color: #01a25e;
 
 .filter {
   width: 240px;
-  padding: 0 10px 10px;
   max-height: 100%;
   float: left;
   margin-right: 60px;
@@ -960,7 +1041,6 @@ input[type="radio"]:checked + label::before {
 
 .catalog {
   width: 560px;
-  padding: 0 10px;
   float: right;
   margin-bottom: 80px;
 }
