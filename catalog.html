@@ -198,47 +198,46 @@
       </div>
       <div class="map-pointer"></div>
     </div>
-  </div>
 
-  <footer>
-    <div class="wrapper clearfix">
-      <div class="socials">
-        <a href="#" class="social-btn social-btn-vk">vk</a>
-        <a href="#" class="social-btn social-btn-fb">fb</a>
-        <a href="#" class="social-btn social-btn-inst">inst</a>
+    <footer>
+      <div class="wrapper clearfix">
+        <div class="socials">
+          <a href="#" class="social-btn social-btn-vk">vk</a>
+          <a href="#" class="social-btn social-btn-fb">fb</a>
+          <a href="#" class="social-btn social-btn-inst">inst</a>
+        </div>
+        <div class="lets-be-friends">
+          <div class="title">Давайте дружить, это выгодно!</div>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
       </div>
-      <div class="lets-be-friends">
-        <div class="title">Давайте дружить, это выгодно!</div>
-        <p>Скидка 10% для друзей из социальных сетей.</p>
-      </div>
+    </footer>
+
+    <div class="modal-feedback">
+      <button type="button" class="btn-close" data-role="closing"></button>
+      <form action="#" method="POST">
+        <div class="form-field-text">
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
+        </div>
+        <div class="form-field-text">
+          <label for="email">Ваш e-mail:</label>
+          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+        </div>
+        <div class="form-textarea">
+          <label for="message">Текст письма:</label>
+          <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-send">Отправить</button>
+      </form>
     </div>
-  </footer>
+    <div class="modal-overlay"></div>
 
-  <div class="modal-feedback">
-    <button type="button" class="btn-close" data-role="closing"></button>
-    <form action="#" method="POST">
-      <div class="form-field-text">
-        <label for="name">Ваше имя:</label>
-        <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
-      </div>
-      <div class="form-field-text">
-        <label for="email">Ваш e-mail:</label>
-        <input type="text" name="email" id="email" placeholder="Для отправки ответа">
-      </div>
-      <div class="form-textarea">
-        <label for="message">Текст письма:</label>
-        <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
-      </div>
-      <button type="submit" class="btn btn-send">Отправить</button>
-    </form>
-  </div>
-  <div class="modal-overlay"></div>
-
-  <script>
-    document.querySelector('body').classList.remove('no-js');
-  </script>
-  <script src="js/form.js"></script>
-  <script src="js/map.js"></script>
-  <script src="js/price.js"></script>
-</body>
-</html>
+    <script>
+      document.querySelector('body').classList.remove('no-js');
+    </script>
+    <script src="js/form.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/price.js"></script>
+  </body>
+  </html>
