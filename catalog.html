@@ -8,233 +8,229 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper-main">
-    <header>
-      <div class="wrapper clearfix">
-        <a href="index.html" class="header-logo"></a>
-        <nav class="header-menu">
-          <ul>
-            <li><a href="#">Студия</a></li>
-            <li><a href="#">Клиенты</a></li>
-            <li><a class="current">Магазин</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#" class="cart">Корзина</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <div class="greeting">
-      <div class="wrapper clearfix">
-        <div class="title">Добро пожаловать в магазин готовых макетов</div>
-      </div>
-    </div>
-
+  <header>
     <div class="wrapper clearfix">
-      <aside class="filter">
-        <form action="#" method="GET">
-          <fieldset>
-            <legend>Стоимость:</legend>
-            <div class="range-filter">
-              <div class="range-controls">
-                <div class="scale"><div class="bar" style="width: 70%;"></div></div>
-                <div class="toggle min-toggle"></div>
-                <div class="toggle max-toggle"></div>
-              </div>
-              <div class="price-controls">
-                <div class="price-field">
-                  <label for="startPrice">от</label>
-                  <input type="text" name="startPrice" id="startPrice" value="0">
-                </div>
-                <div class="price-field">
-                  <label for="endPrice">до</label>
-                  <input type="text" name="endPrice" id="endPrice" value="1500">
-                </div>
-              </div>
-            </div>
-
-
-
-          </fieldset>
-          <fieldset>
-            <legend>Сетка:</legend>
-            <input type="radio" name="grid" id="grid1" value="1" checked>
-            <label for="grid1">Адаптивная</label>
-            <input type="radio" name="grid" id="grid2" value="2">
-            <label for="grid2">Фиксированная</label>
-            <input type="radio" name="grid" id="grid3" value="3">
-            <label for="grid3">Резиновая</label>
-          </fieldset>
-          <fieldset>
-            <legend>Особенности:</legend>
-            <input type="checkbox" name="feature" id="cb1" value="1" checked>
-            <label for="cb1">Слайдер</label>
-            <input type="checkbox" name="feature" id="cb2" value="2">
-            <label for="cb2">Блок преимуществ</label>
-            <input type="checkbox" name="feature" id="cb3" value="3" checked>
-            <label for="cb3">Новости</label>
-            <input type="checkbox" name="feature" id="cb4" value="4">
-            <label for="cb4">Галерея</label>
-            <input type="checkbox" name="feature" id="cb5" value="5">
-            <label for="cb5">Корзина</label>
-          </fieldset>
-          <button type="submit" name="show" class="btn btn-filter">Показать</button>
-        </form>
-      </aside>
-
-      <section class="catalog">
-        <div class="sorting clearfix">
-          <span class="sorting-title">Сортировать:</span>
-          <ul>
-            <li><span class="sort-field"><a href="#">По цене</a></span></li>
-            <li><span class="sort-field"><a href="#">По типу</a></span></li>
-            <li><span class="sort-field"><a href="#">По функционалу</a></span></li>
-            <li><a href="#" class="sort-direction sort-desc selected">desc</a></li>
-            <li><a href="#" class="sort-direction sort-asc">asc</a></li>
-          </ul>
-        </div>
-
-        <div class="items">
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-aviator.jpg" alt="AVIATOR" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Aviator</a></div>
-              <div class="item-description">Одностраничный макет с авторским дизайном</div>
-              <a href="#" class="btn btn-buy">8000 p.</a>
-            </div>
-          </div>
-
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-sunset.jpg" alt="Sunset" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Sunset</a></div>
-              <div class="item-description">Интернет-магазин с личным кабинетом</div>
-              <a href="#" class="btn btn-buy">10000 p.</a>
-            </div>
-          </div>
-
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-forte.jpg" alt="Forte" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Forte</a></div>
-              <div class="item-description">Отличный макет для личного блога</div>
-              <a href="#" class="btn btn-buy">5000 p.</a>
-            </div>
-          </div>
-
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-thai.jpg" alt="Modern Organic Thai" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Modern Organic Thai</a></div>
-              <div class="item-description">Сайт для ресторана быстрого питания</div>
-              <a href="#" class="btn btn-buy">12000 p.</a>
-            </div>
-          </div>
-
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-avenue.jpg" alt="Avenue" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Avenue</a></div>
-              <div class="item-description">Макет для блога о путешествиях</div>
-              <a href="#" class="btn btn-buy">8000 p.</a>
-            </div>
-          </div>
-
-          <div class="catalog-item">
-            <ul class="item-controls">
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-              <li><div class="round"></div></li>
-            </ul>
-            <img src="img/item-dovetail.jpg" alt="Dovetail" width="240" height="240">
-            <div class="item-content">
-              <div class="item-name"><a href="#">Dovetail</a></div>
-              <div class="item-description">Интернет-магазин с галереей товаров</div>
-              <a href="#" class="btn btn-buy">14000 p.</a>
-            </div>
-          </div>
-        </div>
-
-        <ul class="paginator">
-          <li><a class="btn btn-pager current">1</a></li>
-          <li><a href="" class="btn btn-pager">2</a></li>
-          <li><a href="" class="btn btn-pager">3</a></li>
-          <li><a href="" class="btn btn-pager btn-pager-arrow">Следущая</a></li>
+      <a href="index.html" class="header-logo"></a>
+      <nav class="header-menu">
+        <ul>
+          <li><a href="#">Студия</a></li>
+          <li><a href="#">Клиенты</a></li>
+          <li><a class="current">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#" class="cart">Корзина</a></li>
         </ul>
-      </section>
+      </nav>
     </div>
+  </header>
 
-    <div class="map-canvas">
-      <div class="contacts">
-        <div class="title">Nёrds design studio</div>
-        <p>191186, Санкт-Петербург,
-          ул. Б. Конюшенная, д. 19/8</p>
-          <p>тел. +7 (812) 275-75-75</p>
-          <a href="#" class="btn">Напишите нам</a>
-        </div>
-        <div class="map-pointer"></div>
-      </div>
+  <div class="greeting">
+    <div class="wrapper clearfix">
+      <div class="title">Добро пожаловать в магазин готовых макетов</div>
     </div>
+  </div>
 
-    <footer>
-      <div class="wrapper clearfix">
-        <div class="socials">
-          <a href="#" class="social-btn social-btn-vk">vk</a>
-          <a href="#" class="social-btn social-btn-fb">fb</a>
-          <a href="#" class="social-btn social-btn-inst">inst</a>
-        </div>
-        <div class="lets-be-friends">
-          <div class="title">Давайте дружить, это выгодно!</div>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
-        </div>
-      </div>
-    </footer>
-
-    <div class="modal-feedback hidden">
-      <button type="button" class="btn-close"></button>
-      <form action="#" method="POST">
-        <div class="form-field-text">
-          <label for="name">Ваше имя:</label>
-          <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
-        </div>
-        <div class="form-field-text">
-          <label for="email">Ваш e-mail:</label>
-          <input type="text" name="email" id="email" placeholder="Для отправки ответа">
-        </div>
-        <div class="form-textarea">
-          <label for="message">Текст письма:</label>
-          <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
-        </div>
-        <button type="submit" class="btn btn-send">Отправить</button>
+  <div class="wrapper clearfix">
+    <aside class="filter">
+      <form action="#" method="GET">
+        <fieldset>
+          <legend>Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale"><div class="bar" style="width: 70%;"></div></div>
+              <div class="toggle min-toggle"></div>
+              <div class="toggle max-toggle"></div>
+            </div>
+            <div class="price-controls">
+              <div class="price-field">
+                <label for="startPrice">от</label>
+                <input type="text" name="startPrice" id="startPrice" value="0">
+              </div>
+              <div class="price-field">
+                <label for="endPrice">до</label>
+                <input type="text" name="endPrice" id="endPrice" value="1500">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Сетка:</legend>
+          <input type="radio" name="grid" id="grid1" value="1" checked>
+          <label for="grid1">Адаптивная</label>
+          <input type="radio" name="grid" id="grid2" value="2">
+          <label for="grid2">Фиксированная</label>
+          <input type="radio" name="grid" id="grid3" value="3">
+          <label for="grid3">Резиновая</label>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <input type="checkbox" name="feature" id="cb1" value="1" checked>
+          <label for="cb1">Слайдер</label>
+          <input type="checkbox" name="feature" id="cb2" value="2">
+          <label for="cb2">Блок преимуществ</label>
+          <input type="checkbox" name="feature" id="cb3" value="3" checked>
+          <label for="cb3">Новости</label>
+          <input type="checkbox" name="feature" id="cb4" value="4">
+          <label for="cb4">Галерея</label>
+          <input type="checkbox" name="feature" id="cb5" value="5">
+          <label for="cb5">Корзина</label>
+        </fieldset>
+        <button type="submit" name="show" class="btn btn-filter">Показать</button>
       </form>
+    </aside>
+
+    <section class="catalog">
+      <div class="sorting clearfix">
+        <span class="sorting-title">Сортировать:</span>
+        <ul>
+          <li><span class="sort-field"><a href="#">По цене</a></span></li>
+          <li><span class="sort-field"><a href="#">По типу</a></span></li>
+          <li><span class="sort-field"><a href="#">По функционалу</a></span></li>
+          <li><a href="#" class="sort-direction sort-desc selected">desc</a></li>
+          <li><a href="#" class="sort-direction sort-asc">asc</a></li>
+        </ul>
+      </div>
+
+      <div class="items">
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-aviator.jpg" alt="AVIATOR" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Aviator</a></div>
+            <div class="item-description">Одностраничный макет с авторским дизайном</div>
+            <a href="#" class="btn btn-buy">8000 p.</a>
+          </div>
+        </div>
+
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-sunset.jpg" alt="Sunset" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Sunset</a></div>
+            <div class="item-description">Интернет-магазин с личным кабинетом</div>
+            <a href="#" class="btn btn-buy">10000 p.</a>
+          </div>
+        </div>
+
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-forte.jpg" alt="Forte" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Forte</a></div>
+            <div class="item-description">Отличный макет для личного блога</div>
+            <a href="#" class="btn btn-buy">5000 p.</a>
+          </div>
+        </div>
+
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-thai.jpg" alt="Modern Organic Thai" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Modern Organic Thai</a></div>
+            <div class="item-description">Сайт для ресторана быстрого питания</div>
+            <a href="#" class="btn btn-buy">12000 p.</a>
+          </div>
+        </div>
+
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-avenue.jpg" alt="Avenue" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Avenue</a></div>
+            <div class="item-description">Макет для блога о путешествиях</div>
+            <a href="#" class="btn btn-buy">8000 p.</a>
+          </div>
+        </div>
+
+        <div class="catalog-item">
+          <ul class="item-controls">
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+            <li><div class="round"></div></li>
+          </ul>
+          <img src="img/item-dovetail.jpg" alt="Dovetail" width="240" height="240">
+          <div class="item-content">
+            <div class="item-name"><a href="#">Dovetail</a></div>
+            <div class="item-description">Интернет-магазин с галереей товаров</div>
+            <a href="#" class="btn btn-buy">14000 p.</a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="paginator">
+        <li><a class="btn btn-pager current">1</a></li>
+        <li><a href="" class="btn btn-pager">2</a></li>
+        <li><a href="" class="btn btn-pager">3</a></li>
+        <li><a href="" class="btn btn-pager btn-pager-arrow">Следущая</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="map-canvas">
+    <div class="contacts">
+      <div class="title">Nёrds design studio</div>
+      <p>191186, Санкт-Петербург,
+        ул. Б. Конюшенная, д. 19/8</p>
+        <p>тел. +7 (812) 275-75-75</p>
+        <a href="contacts.html" class="btn" id="btnShowModal">Напишите нам</a>
+      </div>
+      <div class="map-pointer"></div>
     </div>
+  </div>
 
-    <div class="modal-overlay hidden"></div>
+  <footer>
+    <div class="wrapper clearfix">
+      <div class="socials">
+        <a href="#" class="social-btn social-btn-vk">vk</a>
+        <a href="#" class="social-btn social-btn-fb">fb</a>
+        <a href="#" class="social-btn social-btn-inst">inst</a>
+      </div>
+      <div class="lets-be-friends">
+        <div class="title">Давайте дружить, это выгодно!</div>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+    </div>
+  </footer>
 
-  </body>
-  </html>
+  <div class="modal-feedback hidden">
+    <button type="button" class="btn-close" data-role="closing"></button>
+    <form action="#" method="POST">
+      <div class="form-field-text">
+        <label for="name">Ваше имя:</label>
+        <input type="text" name="name" id="name" placeholder="Представтесь, пожалуйста">
+      </div>
+      <div class="form-field-text">
+        <label for="email">Ваш e-mail:</label>
+        <input type="text" name="email" id="email" placeholder="Для отправки ответа">
+      </div>
+      <div class="form-textarea">
+        <label for="message">Текст письма:</label>
+        <textarea name="message" id="message" placeholder="В свободной форме" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-send">Отправить</button>
+    </form>
+  </div>
+
+  <div class="modal-overlay hidden"></div>
+  <!-- <script src="js/main.js"></script> -->
+</body>
+</html>

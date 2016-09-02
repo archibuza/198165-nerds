@@ -84,12 +84,6 @@ h2 {
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
-.wrapper-main {
-  min-height: 100%;
-  box-sizing: border-box;
-  padding-bottom: 170px;
-}
-
 .wrapper {
   width: 880px;
   margin-left: auto;
@@ -247,11 +241,6 @@ nav.header-menu {
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
 
-footer {
-  min-height: 140px;
-  margin-top: -140px;
-}
-
 .socials {
   float: left;
   margin-right: 60px;
@@ -333,7 +322,7 @@ footer {
   background: #ffffff;
   box-shadow: 0 20px 40px rgba(0, 1, 1, 0.75);
   padding: 55px 90px 50px 80px;
-  z-index: 20;
+  z-index: 999;
 }
 
 .modal-feedback input,
@@ -341,6 +330,7 @@ footer {
 .modal-feedback textarea {
   margin: 0;
   padding: 0;
+  outline: 0;
 }
 
 .modal-feedback input,
@@ -405,10 +395,12 @@ footer {
   font-weight: 500;
   line-height: 18px;
 }
-.modal-feedback .btn-send:hover {
+.modal-feedback .btn-send:hover,
+.modal-feedback .btn-close:hover {
   background-color: #d6494d;
 }
-.modal-feedback .btn-send:active {
+.modal-feedback .btn-send:active,
+.modal-feedback .btn-close:active {
   background-color: #b63538;
   box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.15);
 }
@@ -424,10 +416,7 @@ footer {
   background: url("../img/cross.png") no-repeat 50% 50%;
   background-color: #fb565a;
   cursor: pointer;
-}
-
-.btn-close:hover {
-  background-color: #d6494d;
+  outline: 0;
 }
 
 .modal-overlay {
@@ -450,7 +439,6 @@ footer {
 
 .slides {
   position: relative;
-  /*width: 900px;*/
   height: 310px;
 }
 
@@ -522,7 +510,7 @@ footer {
   padding-left: 0;
   list-style: none;
   text-align: center;
-  z-index: 1000;
+  z-index: 50;
 }
 
 .slider-controls > li {
