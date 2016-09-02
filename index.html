@@ -6,8 +6,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
-<body>
+<body class="no-js">
   <header>
     <div class="wrapper clearfix">
       <a href="index.html" class="header-logo"></a>
@@ -26,21 +27,21 @@
   <div class="slider">
     <div class="wrapper clearfix">
       <div class="slides">
-        <section class="slide active">
+        <section class="slide active" id="slide-0">
           <div class="slide-text">
             <div class="title">Долго, дорого, скрупулезно.</div>
             <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения.</p>
             <a href="#" class="btn">Узнать больше</a>
           </div>
         </section>
-        <section class="slide">
+        <section class="slide" id="slide-1">
           <div class="slide-text">
             <div class="title">Любите ли вы математику, как любим ее мы?</div>
             <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br> за креатив, чтобы дать им возможность все просчитать</p>
             <a href="#" class="btn">Узнать больше</a>
           </div>
         </section>
-        <section class="slide">
+        <section class="slide" id="slide-2">
           <div class="slide-text">
             <div class="title">Только наркотики,<br> только хардкор!</div>
             <p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюциногенов</p>
@@ -49,9 +50,9 @@
         </section>
       </div>
       <ol class="slider-controls">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
+        <li class="active" id="point-0"></li>
+        <li id="point-1"></li>
+        <li id="point-2"></li>
       </ol>
     </div>
   </div>
@@ -139,12 +140,14 @@
   </main>
 
   <div class="map-canvas">
-    <div class="contacts">
-      <div class="title">Nёrds design studio</div>
-      <p>191186, Санкт-Петербург,
-        ул. Б. Конюшенная, д. 19/8</p>
-        <p>тел. +7 (812) 275-75-75</p>
-        <a href="contacts.html" class="btn" id="btnShowModal">Напишите нам</a>
+    <div class="wrapper">
+      <div class="contacts">
+        <div class="title">Nёrds design studio</div>
+        <p>191186, Санкт-Петербург,
+          ул. Б. Конюшенная, д. 19/8</p>
+          <p>тел. +7 (812) 275-75-75</p>
+          <a href="contacts.html" class="btn" id="btnShowModal">Напишите нам</a>
+        </div>
       </div>
       <div class="map-pointer"></div>
     </div>
@@ -164,7 +167,7 @@
     </div>
   </footer>
 
-  <div class="modal-feedback hidden">
+  <div class="modal-feedback">
     <button type="button" class="btn-close" data-role="closing"></button>
     <form action="#" method="POST">
       <div class="form-field-text">
@@ -182,8 +185,13 @@
       <button type="submit" class="btn btn-send">Отправить</button>
     </form>
   </div>
+  <div class="modal-overlay"></div>
 
-  <div class="modal-overlay hidden"></div>
-  <!-- <script src="js/main.js"></script> -->
+  <script>
+    document.querySelector('body').classList.remove('no-js');
+  </script>
+  <script src="js/form.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
