@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic" rel="stylesheet">
+  <!-- Если вы используете API локально, то в URL ресурса необходимо указывать протокол в стандартном виде (http://...)-->
   <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body class="no-js">
   <header>
     <div class="wrapper clearfix">
-      <a href="index.html" class="header-logo"></a>
+      <a class="header-logo"></a>
       <nav class="header-menu">
         <ul>
           <li><a href="#">Студия</a></li>
@@ -36,7 +37,7 @@
         </section>
         <section class="slide" id="slide-1">
           <div class="slide-text">
-            <div class="title">Любите ли вы математику, как любим ее мы?</div>
+            <div class="title">Любите ли вы математику,<br> как любим ее мы?</div>
             <p>Нашим дизайнерам мы удаляем нейроны, ответственные<br> за креатив, чтобы дать им возможность все просчитать</p>
             <a href="#" class="btn">Узнать больше</a>
           </div>
@@ -189,8 +190,8 @@
     <script>
       document.querySelector('body').classList.remove('no-js');
     </script>
-    <script src="js/form.js"></script>
-    <script src="js/map.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/map.min.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
   </html>

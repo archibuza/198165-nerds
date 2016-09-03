@@ -1,9 +1,12 @@
 
+/*div {
+  outline: 1px solid blue;
+}*/
+
 /* * * * * * Common * * * * */
 @font-face {
   font-weight: normal;
   font-style: normal;
-
   font-family: "symbols-nerds";
   src: url("../fonts/symbols-nerds.woff") format("woff"),
        url("../fonts/symbols-nerds.woff2") format("woff2");
@@ -11,7 +14,6 @@
 
 html,
 body {
-
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -100,25 +102,15 @@ nav.header-menu {
 .header-menu li {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
-  line-height: 30px;
-  text-transform: uppercase;
 }
 
 .header-menu a {
+  margin-left: 45px;
   color: #000000;
   text-decoration: none;
-  margin-left: 45px;
-}
-
-
-.header-menu a.current {
-  padding-bottom: 2px;
-  border-bottom: 2px solid #fb565a;;
-}
-
-.header-menu a.cart {
-  margin-left: 68px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .header-menu a:hover {
@@ -128,6 +120,15 @@ nav.header-menu {
 .header-menu a:active {
   opacity: 0.15;
   color: #000000;
+}
+
+.header-menu a.current {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #fb565a;;
+}
+
+.header-menu a.cart {
+  margin-left: 68px;
 }
 
 .header-menu a.cart::before {
@@ -168,7 +169,7 @@ nav.header-menu {
   right: 170px;
   width: 190px;
   height: 190px;
-  background: url("../img/map-pointer.png") no-repeat 0% 50%;
+  background: url("../img/map-pointer.png") no-repeat 0 50%;
 }
 
 .map-canvas {
@@ -176,7 +177,7 @@ nav.header-menu {
   height: 416px;
   width: 100%;
   background: #e9e5dc;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 
@@ -231,7 +232,7 @@ nav.header-menu {
 }
 
 footer {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .socials {
@@ -250,6 +251,7 @@ footer {
   position:relative;
   border-radius: 50%;
   background-color: #e1e1e1;
+  text-decoration: none;
 }
 .social-btn:hover {
   background-color: #fb565a;
@@ -262,7 +264,9 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: #ffffff;
   font-family: symbols;
   font-size: 23px;
@@ -319,16 +323,24 @@ footer {
   z-index: 999;
 }
 
+@-webkit-keyframes bounce {
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  70% { -webkit-transform: translateY(30px); transform: translateY(30px); }
+  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
 @keyframes bounce {
-  0% { transform: translateY(-2000px); }
-  70% { transform: translateY(30px); }
-  90% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% { -webkit-transform: translateY(-2000px); transform: translateY(-2000px); }
+  70% { -webkit-transform: translateY(30px); transform: translateY(30px); }
+  90% { -webkit-transform: translateY(-10px); transform: translateY(-10px); }
+  100% { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 
 .modal-feedback.show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-feedback input,
@@ -488,6 +500,13 @@ footer {
   line-height: 1;
   font-weight: bold;
   color: #000000;
+  margin-bottom: 20px;
+}
+
+.slide-text p {
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
 }
 
 .slide .btn {
@@ -513,7 +532,7 @@ footer {
 }
 
 .slide:nth-child(2) .slide-text {
-  width: 467px;
+  width: 477px;
 }
 
 .slide:nth-child(3) {
@@ -532,7 +551,7 @@ footer {
   left: 50%;
   width: 200px;
   height: 10px;
-  margin-left: -100px;
+  margin-left: -110px;
   padding-left: 0;
   list-style: none;
   text-align: center;
@@ -647,7 +666,7 @@ background-color: #01a25e;
 
 .about-us li {
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
   padding-left: 35px;
 }
 
@@ -672,7 +691,8 @@ background-color: #01a25e;
   margin-top: 13px;
 }
 
-.about-us h2, p {
+.about-us h2,
+.about-us p {
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -680,7 +700,7 @@ background-color: #01a25e;
 
 .about-us h2 {
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 h2.decorated {
@@ -703,18 +723,19 @@ h2.decorated {
 }
 
 .about-us-row {
-  /*background-color: #E68787;*/
   margin-bottom: 22px;
 }
 
+.about-us-row:nth-child(2) {
+  margin-bottom: 38px;
+}
+
 .about-us-column-left {
-  /*background-color: #E6BBBB;*/
   width: 575px;
   float: left;
 }
 
 .about-us-column-right {
-  /*background-color: #B8B5DA;*/
   width: 240px;
   float: right;
 }
@@ -724,16 +745,16 @@ ul.partners {
   padding: 0;
   list-style:none;
   font-size: 0;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   border-bottom: 2px solid #eeeeee;
-  margin-bottom: 80px;
+  margin-bottom: 85px;
 }
 
 ul.partners li {
-  font-size: 16px;
   display: inline-block;
   margin-right: 110px;
   vertical-align: middle;
+  font-size: 16px;
   text-align: center;
   width: 220px;
   opacity: 0.2;
@@ -752,29 +773,27 @@ ul.partners li:active {
 /* * * * * * catalog.html * * * * */
 .greeting {
   background: #eeeeee;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .greeting .title {
   text-align: center;
-  padding: 23px 125px 85px;
+  padding: 23px 115px 85px;
   font-size: 40px;
   line-height: 46px;
   text-transform: uppercase;
 }
 
 .filter {
-  width: 240px;
-  max-height: 100%;
   float: left;
   margin-right: 60px;
 }
 
 fieldset {
-  border: none;
   margin: 0;
-  margin-bottom: 25px;
+  border: none;
   padding: 0;
+  margin-bottom: 50px;
 }
 
 fieldset label {
@@ -786,8 +805,8 @@ fieldset label {
 legend {
   font-size: 18px;
   font-weight: 500;
-  line-height: 30px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .range-filter {
@@ -869,11 +888,19 @@ input[type="radio"] {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: block;
-  margin: 10px 0;
-  line-height: 20px;
+  margin:0;
+  margin-bottom: 21px;
   padding-left: 35px;
   position: relative;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+input[type="checkbox"] + label:last-child,
+input[type="radio"] + label:last-child {
+  margin: 0;
 }
 
 input[type="checkbox"] + label::before {
@@ -931,6 +958,7 @@ input[type="radio"]:checked + label::before {
 }
 
 .btn-filter {
+  margin-top: 10px;
   width: 155px;
   text-align: center;
   padding: 10px 0;
@@ -949,15 +977,16 @@ input[type="radio"]:checked + label::before {
 }
 
 .sorting {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
 }
 
 .sorting ul {
-  margin: 0;
-  padding: 2px 0;
   display: inline-block;
-  font-size: 0;
   vertical-align: top;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
 }
 
 .sorting li {
@@ -968,19 +997,20 @@ input[type="radio"]:checked + label::before {
   text-decoration: none;
 }
 .sorting-title {
-  margin-right: 42px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 35px;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 12px;
 }
 
 .sort-field a {
   border-bottom: 1px dotted #00ca74;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
   opacity: 0.3;
   color: #000000;
   font-size: 12px;
-  line-height: 18px;
-  text-transform: uppercase;
+  line-height: 12px;
 }
 
 .sort-field a:hover {
@@ -1010,7 +1040,9 @@ input[type="radio"]:checked + label::before {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  -webkit-transform: translate(-50%, -80%);
+      -ms-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
   font-size: 23px;
   line-height: 20px;
   color: #c1c1c1;
@@ -1026,11 +1058,11 @@ input[type="radio"]:checked + label::before {
 }
 
 .sort-desc{
-  right: -63px;
+  right: -55px;
 }
 
 .sort-asc {
-  right: -63px;
+  right: -55px;
 }
 
 .sort-desc::before {
@@ -1088,9 +1120,8 @@ input[type="radio"]:checked + label::before {
   vertical-align: top;
   margin:0;
   padding: 0;
-  padding-left: 12px;
+  padding-left: 10px;
   height: 28px;
-  /*background-color: #f1f1f1;*/
 }
 
 ul.item-controls li {
@@ -1176,10 +1207,10 @@ ul.item-controls li {
 }
 
 .btn-pager {
-  min-width: 38px;
-  padding: 14px 5px;
+  min-width: 28px;
+  padding: 13px 5px;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 12px;
   color: #000000;
   background-color: #f1f1f1;
   text-align: center;
@@ -1195,11 +1226,11 @@ ul.item-controls li {
 }
 
 .btn-pager.current {
+  padding: 11px 3px;
   background-color: #ffffff;
   border: 2px solid #f1f1f1;
-  padding: 12px 3px;
 }
 
 .btn-pager-arrow {
-  width: 140px;
+  width: 130px;
 }
