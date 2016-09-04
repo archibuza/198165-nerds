@@ -757,7 +757,7 @@ ul.partners li {
   opacity: 0.2;
 }
 
-ul.partners li:last-child {
+ul.partners li:nth-child(3n) {
   margin-right: 0;
 }
 
